@@ -1,13 +1,12 @@
 file_format: "1"
-id: corne
-name: Corne
+id: harite_v3
+name: Harite v3
 type: shield
-url: https://github.com/foostan/crkbd/
-requires: [pro_micro]
-exposes: [i2c_oled]
+url: https://github.com/harite-v3
+requires: [seeeduino_xiao_ble]
+exposes: []
 features:
   - keys
-  - display
 siblings:
-  - corne_left
-  - corne_right
+  - harite_v3_left
+  - harite_v3_right
