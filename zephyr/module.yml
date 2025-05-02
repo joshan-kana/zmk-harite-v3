@@ -1,15 +1,15 @@
 # Delete all unused properties.
 
 # Give your module a name
-name: zmk-module-template
+name: zmk-keyboard-harite-v3
 build:
   # List your dependencies
-  depends:
-    - zmk-example-dependency
+  # depends:
+  #   - zmk-example-dependency
   # Folder containing a "CMakeLists.txt" (. = root)
-  cmake: .
+  # cmake: .
   # Kconfig filepath
-  kconfig: Kconfig
+  # kconfig: Kconfig
   settings:
     # Folder containing a "boards" folder (. = root)
     board_root: .
