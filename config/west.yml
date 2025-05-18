@@ -4,16 +4,18 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: badjeff
       url-base: https://github.com/badjeff
+    - name: dlip
+      url-base: https://github.com/dlip
   projects:
     - name: zmk-analog-input-driver
-      remote: badjeff
-      revision: 2473ec0f112f83131f3afe3e2c2746af7f17150c  # main
+      remote: dlip
+      revision: 79ddd37f14781f953235e7ff6fb8cce3685a7048  # main
     - name: zmk-pmw3610-driver
       remote: badjeff
       revision: 12d532104ff1ef2a91d264a623842ea2095926cc  # main
     - name: zmk
-      remote: zmkfirmware
-      revision: 461f5c832fb8854d87dca54d113d306323697219  # main
+      remote: dlip
+      revision: eeac4c3a53e6945281d5e2bb189c94b2c0bbce45  # main
       import: app/west.yml
     - name: zephyr
       remote: zmkfirmware

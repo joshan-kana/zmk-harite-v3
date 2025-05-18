@@ -1,5 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <input/processors.dtsi>
 
 / {
     kscan0: kscan_composite {
@@ -25,10 +26,10 @@
         wakeup-source;
 
         row-gpios
-            = <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
 
         col-gpios
@@ -45,7 +46,7 @@
         compatible = "zmk,kscan-gpio-direct";
         wakeup-source;
         input-gpios
-            = <&xiao_d 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            = <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
     };
 
@@ -77,22 +78,12 @@
         zmk,physical-layout = &physical_layout0;
         // Other chosen items
     };
-};
-
-&uart0 {
-	status = "disabled";
-};
-
-&adc {
-	status = "okay";
-};
-
-/ {
+    
 	anin0: analog_input_0 {
 		compatible = "zmk,analog-input";
 		sampling-hz = <100>;
 		x-ch {
-			io-channels = <&adc 0>;
+			io-channels = <&adc 2>;
 			mv-mid = <1630>;
 			mv-min-max = <1600>;
 			mv-deadzone = <10>;
@@ -103,7 +94,7 @@
 			input-code = <INPUT_REL_X>;
 		};
 		y-ch {
-			io-channels = <&adc 1>;
+			io-channels = <&adc 3>;
 			mv-mid = <1630>;
 			mv-min-max = <1600>;
 			mv-deadzone = <10>;
@@ -115,7 +106,7 @@
 
 			/* enable report mdoe for gamepad axix or knob */
 /* to only call input_report on quantquantized value is updated */
-			report-on-change-only;
+	    /* report-on-change-only; */
 
 		};
 	};
@@ -124,6 +115,16 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&anin0>;
+        input-processors = <&zip_xy_to_scroll_mapper>;
     };
 };
+
+/* &uart0 { */
+/* 	status = "disabled"; */
+/* }; */
+
+&adc {
+	status = "okay";
+};
+
 
