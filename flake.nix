@@ -14,14 +14,14 @@
     packages = forAllSystems (system: rec {
       default = firmware;
 
-      firmware = zmk-nix.legacyPackages.${system}.buildSplitKeyboard {
+      firmware = zmk-nix.legacyPackages.${system}.buildKeyboard {
         name = "firmware";
         extraWestBuildFlags = ["-S" "zmk-usb-logging"];
 
         src = nixpkgs.lib.sourceFilesBySuffices self [ ".board" ".cmake" ".conf" ".defconfig" ".dts" ".dtsi" ".json" ".keymap" ".overlay" ".shield" ".yml" "_defconfig" ];
 
         board = "seeeduino_xiao_ble";
-        shield = "harite_v3_%PART%";
+        shield = "harite_v3_left";
 
         zephyrDepsHash = "sha256-lrGM9Y88Z1AL85SNvn1dPANSD+cHnYg3u88Y8s0EEIE=";
 
