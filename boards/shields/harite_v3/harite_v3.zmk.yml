@@ -7,7 +7,6 @@ requires: [seeeduino_xiao_ble]
 exposes: []
 features:
   - keys
-  - pointer
 siblings:
   - harite_v3_left
   - harite_v3_right
