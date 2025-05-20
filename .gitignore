@@ -1,1 +1,7 @@
 /result
+/zmk-analog-input-driver
+/zmk-pmw3610-driver
+/zmk
+/zephyr
+/modules
+/.west
