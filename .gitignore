@@ -1,6 +1,8 @@
+/build
 /result
 /zmk-analog-input-driver
 /zmk-pmw3610-driver
+/zmk-keyboard-harite-v3
 /zmk
 /zephyr
 /modules
