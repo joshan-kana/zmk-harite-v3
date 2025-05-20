@@ -7,6 +7,9 @@ manifest:
     - name: dlip
       url-base: https://github.com/dlip
   projects:
+    - name: zmk-keyboard-harite-v3
+      remote: dlip
+      revision: b982fda40ec8d4ddd330ff80b6182519d1bd2c45  # main
     - name: zmk-analog-input-driver
       remote: badjeff
       revision: a2dd1cbd7e5143b0634357aa1f48b656d0287c54  # main
