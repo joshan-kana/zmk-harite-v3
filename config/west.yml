@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/badjeff
     - name: dlip
       url-base: https://github.com/dlip
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
   projects:
     - name: zmk-keyboard-harite-v3
       remote: dlip
@@ -13,6 +15,9 @@ manifest:
     - name: zmk-analog-input-driver
       remote: badjeff
       revision: a2dd1cbd7e5143b0634357aa1f48b656d0287c54  # main
+    - name: cirque-input-module
+      remote: petejohanson
+      revision: 0de55f36bc720b5be3d8880dc856d4d78baf5214  # main
     - name: zmk-pmw3610-driver
       remote: badjeff
       revision: 12d532104ff1ef2a91d264a623842ea2095926cc  # main
