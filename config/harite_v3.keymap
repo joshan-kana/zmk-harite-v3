@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 
 / {
     keymap {
@@ -16,7 +17,7 @@
                                                                                &kp U               &kp U
                                                                          &kp L       &kp R   &kp L       &kp R
                                                                                &kp D               &kp D
-                &bootloader
+                &bt BT_CLR
             >;
         };
     };
