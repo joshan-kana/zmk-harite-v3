@@ -22,16 +22,52 @@
         };
     };
 
+    /* Cirque */
     /* glidepoint_listener: glidepoint_listener { */
     /*     compatible = "zmk,input-listener"; */
     /*     device = <&glidepoint>; */
     /* }; */
+    /* PMW3310 */
     trackball_listener {
       compatible = "zmk,input-listener";
       device = <&trackball>;
     };
+    /* Thumbstick */
+    /* anin0: analog_input_0 { */
+    /*   compatible = "zmk,analog-input"; */
+    /*   status = "disabled"; */
+    /*   sampling-hz = <100>; */
+    /*   x-ch { */
+    /*     io-channels = <&adc 2>; */
+    /*     mv-mid = <1667>; */
+    /*     mv-min-max = <3738>; */
+    /*     mv-deadzone = <300>; */
+    /*     scale-multiplier = <1>; */
+    /*     scale-divisor = <1000>; */
+    /*     invert; */
+    /*     evt-type = <INPUT_EV_REL>; */
+    /*     input-code = <INPUT_REL_X>; */
+    /*   }; */
+    /*   y-ch { */
+    /*     io-channels = <&adc 3>; */
+    /*     mv-mid = <2055>; */
+    /*     mv-min-max = <3718>; */
+    /*     mv-deadzone = <300>; */
+    /*     scale-multiplier = <1>; */
+    /*     scale-divisor = <1000>; */
+    /*     evt-type = <INPUT_EV_REL>; */
+    /*     input-code = <INPUT_REL_Y>; */
+    /*   }; */
+    /* }; */
+    /* analog_input_listener { */
+    /*     status = "okay"; */
+    /*     compatible = "zmk,input-listener"; */
+    /*     device = <&anin0>; */
+    /*     input-processors = <&zip_xy_to_scroll_mapper>; */
+    /* }; */
  };
 
+/* Cirque */
 /* &spi0 { */
 /*     status = "okay"; */
 /*     glidepoint: glidepoint@0 { */
@@ -39,9 +75,16 @@
 /*     }; */
 /* }; */
 
+/* PMW3310 */
 &spi1 {
     status = "okay";
     trackball: trackball@0 {
         status = "okay";
     };
 };
+
+/* Thumbstick */
+/* &adc { */
+/* 	status = "okay"; */
+/* }; */
+
