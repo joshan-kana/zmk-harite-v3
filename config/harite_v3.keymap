@@ -21,4 +21,27 @@
             >;
         };
     };
+
+    /* glidepoint_listener: glidepoint_listener { */
+    /*     compatible = "zmk,input-listener"; */
+    /*     device = <&glidepoint>; */
+    /* }; */
+    trackball_listener {
+      compatible = "zmk,input-listener";
+      device = <&trackball>;
+    };
  };
+
+/* &spi0 { */
+/*     status = "okay"; */
+/*     glidepoint: glidepoint@0 { */
+/*         status = "okay"; */
+/*     }; */
+/* }; */
+
+&spi1 {
+    status = "okay";
+    trackball: trackball@0 {
+        status = "okay";
+    };
+};
