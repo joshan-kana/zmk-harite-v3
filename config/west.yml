@@ -11,23 +11,23 @@ manifest:
   projects:
     - name: zmk-keyboard-harite-v3
       remote: dlip
-      revision: cccc37105673d13f1f33b95f0017fb4e2d4a31f7  # main
+      revision: ff52a530b8a9d5d6df9e2c40ca67a6a3c163bea6  # main
     - name: zmk-analog-input-driver
       remote: badjeff
-      revision: a2dd1cbd7e5143b0634357aa1f48b656d0287c54  # main
+      revision: d07aedb66801598c0c278e60565bd8f6ab42f9b2  # main
     - name: cirque-input-module
       remote: petejohanson
       revision: 0de55f36bc720b5be3d8880dc856d4d78baf5214  # main
     - name: zmk-pmw3610-driver
       remote: badjeff
-      revision: 12d532104ff1ef2a91d264a623842ea2095926cc  # main
+      revision: 35c079feabfe55eb78b840587666a9ffacadcca5  # main
     - name: zmk
       remote: dlip
       revision: eeac4c3a53e6945281d5e2bb189c94b2c0bbce45  # main
       import: app/west.yml
     - name: zephyr
       remote: zmkfirmware
-      revision: 0fa4cc26d8b1e5243570ccc0f7f66c4c428d2961  # v3.5.0+zmk-fixes
+      revision: 489d3b00c49d1d3a0d4ec1f693fa0719db38bbf9  # v3.5.0+zmk-fixes
       import:
         name-blocklist:
           - ci-tools
