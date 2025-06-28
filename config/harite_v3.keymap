@@ -8,16 +8,72 @@
 
         default_layer {
             bindings = <
-                      &studio_unlock              &kp U              &kp U              &kp U               &kp U              &kp U              &kp U              &kp U
+                      &studio_unlock     &kp U              &kp U              &kp U               &kp U              &kp U              &kp U              &kp U
                 &kp L       &kp R  &kp L       &kp R  &kp L       &kp R  &kp L       &kp R   &kp L       &kp R  &kp L       &kp R  &kp L       &kp R  &kp L       &kp R
                       &kp D              &kp D              &kp D              &kp D               &kp D              &kp D              &kp D              &kp D
+
                                                                                &kp U               &kp U
                                                                          &kp L       &kp R   &kp L       &kp R
                                                                                &kp D               &kp D
                                                                                &kp U               &kp U
                                                                          &kp L       &kp R   &kp L       &kp R
                                                                                &kp D               &kp D
-                &kp A
+            >;
+        };
+        layer_1 {
+            bindings = <
+                      &none              &none              &none              &none               &none              &none              &none              &none
+                &none       &none  &none       &none  &none       &none  &none       &none   &none       &none  &none       &none  &none       &none  &none       &none
+                      &none              &none              &none              &none               &none              &none              &none              &none
+
+                                                                               &none               &none
+                                                                         &none       &none   &none       &none
+                                                                               &none               &none
+                                                                               &none               &none
+                                                                         &none       &none   &none       &none
+                                                                               &none               &none
+            >;
+        };
+        layer_2 {
+            bindings = <
+                      &none              &none              &none              &none               &none              &none              &none              &none
+                &none       &none  &none       &none  &none       &none  &none       &none   &none       &none  &none       &none  &none       &none  &none       &none
+                      &none              &none              &none              &none               &none              &none              &none              &none
+
+                                                                               &none               &none
+                                                                         &none       &none   &none       &none
+                                                                               &none               &none
+                                                                               &none               &none
+                                                                         &none       &none   &none       &none
+                                                                               &none               &none
+            >;
+        };
+        layer_3 {
+            bindings = <
+                      &none              &none              &none              &none               &none              &none              &none              &none
+                &none       &none  &none       &none  &none       &none  &none       &none   &none       &none  &none       &none  &none       &none  &none       &none
+                      &none              &none              &none              &none               &none              &none              &none              &none
+
+                                                                               &none               &none
+                                                                         &none       &none   &none       &none
+                                                                               &none               &none
+                                                                               &none               &none
+                                                                         &none       &none   &none       &none
+                                                                               &none               &none
+            >;
+        };
+        layer_4 {
+            bindings = <
+                      &none              &none              &none              &none               &none              &none              &none              &none
+                &none       &none  &none       &none  &none       &none  &none       &none   &none       &none  &none       &none  &none       &none  &none       &none
+                      &none              &none              &none              &none               &none              &none              &none              &none
+
+                                                                               &none               &none
+                                                                         &none       &none   &none       &none
+                                                                               &none               &none
+                                                                               &none               &none
+                                                                         &none       &none   &none       &none
+                                                                               &none               &none
             >;
         };
     };
