@@ -11,7 +11,7 @@ manifest:
   projects:
     - name: zmk-keyboard-harite-v3
       remote: dlip
-      revision: 0e5cfbbd427fe10414c462d1811b1ee1454ce6e6  # main
+      revision: 3823f672dd99317f5d360d1deac365cfbc80efb3  # main
     - name: zmk-analog-input-driver
       remote: badjeff
       revision: d07aedb66801598c0c278e60565bd8f6ab42f9b2  # main
