@@ -33,30 +33,30 @@
 
         default_layer {
             bindings = <
-                         &studio_unlock          &kp F               &kp W              &kp O               &kp L              &kp U              &kp B                 &kp Z
-                &kp BSLH       &kp QUOT    &kp X       &kp K  &kp Y        &kp H  &kp M       &kp C   &kp I       &kp G  &kp R       &kp V  &kp P       &kp J  &kp SEMI    &kp FSLH
-                         &mt LSHIFT COMMA        &mt LALT S         &mt LGUI T          &mt LCTRL A         &mt RCTRL N        &mt RGUI E         &mt RALT D            &mt RSHIFT DOT
+                  &studio_unlock      &kp F         &kp W         &kp O                          &kp L          &kp U         &kp B         &kp Z
+                &kp BSLH  &kp QUOT  &kp X  &kp K  &kp Y  &kp H  &kp M  &kp C                   &kp I  &kp G   &kp R  &kp V  &kp P  &kp J  &kp SEMI  &kp FSLH
+                  &mt LSHIFT COMMA    &mt LALT S    &mt LGUI T    &mt LCTRL A                    &mt RCTRL N    &mt RGUI E    &mt RALT D    &mt RSHIFT DOT
 
-                                                                               &kp A               &none
-                                                                         &lt _NUM BSPC       &lt _SYS DEL   &key_repeat       &kp SPC
-                                                                               &mt LSHIFT ESC               &mt RSHIFT ENTER
-                                                                               &kp B               &kp U
-                                                                         &mkp MB1       &mkp MB3   &kp L   &kp R
-                                                                               &mkp MB2              &kp D
+                                                                  &kp A                          &none
+                                                                &lt _NUM BSPC  &lt _SYS DEL    &key_repeat  &kp SPC
+                                                                  &mt LSHIFT ESC                 &mt RSHIFT ENTER
+                                                                  &kp B                          &kp UP
+                                                                &mkp MB1  &mkp MB3             &kp LEFT  &kp RIGHT
+                                                                  &mkp MB2                       &kp DOWN
             >;
         };
         num {
             bindings = <
-                      &kp DLLR                     &kp TILDE                  &kp LBKT                     &kp EQUAL                   &kp N7                &kp N8                  &kp N9                    &kp EXCL
-                &kp  CARET     &kp PRCNT  &kp HASH           &kp AT  &kp LBRC          &kp RBRC  &kp UNDER           &kp PLUS   &kp N4        &kp N0  &kp N5        &kp LPAR  &kp N6        &kp RPAR  &kp AMPS          &kp STAR
-                      &trans                       &mt LALT GRAVE             &mt LGUI RBKT                &mt LCTRL MINUS             &mt RCTRL N1          &mt RGUI N2             &mt RALT N3               &trans
+                  &kp DLLR               &kp TILDE         &kp LBKT            &kp EQUAL              &kp N7          &kp N8            &kp N9            &kp EXCL
+                &kp  CARET  &kp PRCNT  &kp HASH  &kp AT  &kp LBRC  &kp RBRC  &kp UNDER  &kp PLUS    &kp N4  &kp N0  &kp N5  &kp LPAR  &kp N6  &kp RPAR  &kp AMPS  &kp STAR
+                  &trans                 &mt LALT GRAVE    &mt LGUI RBKT       &mt LCTRL MINUS        &mt RCTRL N1    &mt RGUI N2       &mt RALT N3       &trans
 
-                                                                                    &trans             &trans
-                                                                                  &trans  &trans     &trans  &trans
-                                                                                    &trans             &trans
-                                                                                    &trans             &trans
-                                                                                  &trans  &trans     &trans  &trans
-                                                                                    &trans             &trans
+                                                                                    &trans            &trans
+                                                                                  &trans  &trans    &trans  &trans
+                                                                                    &trans            &trans
+                                                                                    &trans            &trans
+                                                                                  &trans  &trans    &trans  &trans
+                                                                                    &trans            &trans
             >;
         };
         fun {
@@ -68,9 +68,9 @@
                                                                                     &trans             &trans
                                                                                   &trans  &trans     &trans  &trans
                                                                                     &trans             &trans
-                                                                                    &trans             &trans
-                                                                                  &trans  &trans     &trans  &trans
-                                                                                    &trans             &trans
+                                                                                    &trans             &kp PG_UP
+                                                                                  &trans  &trans     &kp HOME  &kp END
+                                                                                    &trans             &kp PG_DN
             >;
         };
         sys {
