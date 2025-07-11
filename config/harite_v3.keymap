@@ -8,6 +8,12 @@
 #define _NUM 1
 #define _FUN 2
 
+// KEYS
+#define PC_UNDO &kp LC(Z)
+#define PC_CUT  &kp LC(X)
+#define PC_COPY &mt LCTRL LC(C)
+#define PC_PST  &kp LC(V)
+
 &mt {
   flavor = "tap-preferred";
   tapping-term-ms = <200>;
@@ -30,40 +36,40 @@
                 &kp BSLH       &kp QUOT    &kp X       &kp K  &kp Y        &kp H  &kp M       &kp C   &kp I       &kp G  &kp R       &kp V  &kp P       &kp J  &kp SEMI    &kp FSLH
                          &mt LSHIFT COMMA        &mt LALT S         &mt LGUI T          &mt LCTRL A         &mt RCTRL N        &mt RGUI E         &mt RALT D            &mt RSHIFT DOT
 
-                                                                               &lt _FUN TAB               &none
+                                                                               &kp A               &none
                                                                          &lt _NUM BSPC       &lt _FUN DEL   &key_repeat       &kp SPC
                                                                                &mt LSHIFT ESC               &mt RSHIFT ENTER
-                                                                               &mkp MB4               &kp U
+                                                                               &kp B               &kp U
                                                                          &mkp MB1       &mkp MB3   &kp L   &kp R
-                                                                               &mkp MB1              &kp D
+                                                                               &mkp MB2              &kp D
             >;
         };
         num {
             bindings = <
-                      &kp DLLR              &kp TILDE             &kp LBKT             &kp EQUAL                 &kp N7              &kp N8             &kp N9            &kp EXCL
-                &kp  CARET     &kp PRCNT &kp HASH      &kp AT &kp LBRC      &kp RBRC &kp UNDER      &kp PLUS         &kp N4       &kp N0   &kp N5       &kp LPAR  &kp N6       &kp RPAR  &kp AMPS       &kp STAR
-                      &trans        &mt LALT GRAVE         &mt LGUI RBKT          &mt LCTRL MINUS         &mt RCTRL N2        &mt RGUI N3        &trans
+                      &kp DLLR                     &kp TILDE                  &kp LBKT                     &kp EQUAL                   &kp N7                &kp N8                  &kp N9                    &kp EXCL
+                &kp  CARET     &kp PRCNT  &kp HASH           &kp AT  &kp LBRC          &kp RBRC  &kp UNDER           &kp PLUS   &kp N4        &kp N0  &kp N5        &kp LPAR  &kp N6        &kp RPAR  &kp AMPS          &kp STAR
+                      &trans                       &mt LALT GRAVE             &mt LGUI RBKT                &mt LCTRL MINUS             &mt RCTRL N1          &mt RGUI N2             &mt RALT N3               &trans
 
-                                                                               &none               &none
-                                                                         &none       &none   &none       &none
-                                                                               &none               &none
-                                                                               &none               &none
-                                                                         &none       &none   &none       &none
-                                                                               &none               &none
+                                                                                    &trans             &trans
+                                                                                  &trans  &trans     &trans  &trans
+                                                                                    &trans             &trans
+                                                                                    &trans             &trans
+                                                                                  &trans  &trans     &trans  &trans
+                                                                                    &trans             &trans
             >;
         };
         fun {
             bindings = <
-                      &studio_unlock     &none              &none              &none               &none              &none              &none              &none
-                &none       &none  &none       &none  &none       &none  &none       &none   &none       &none  &none       &none  &none       &none  &none       &none
-                      &bootloader        &none              &none              &none               &none              &none              &none              &none
+                  &none         &kp C_VOL_UP                &kp PSCRN               PC_PST             &kp F7           &kp F8           &kp F9           &none
+                &none  &none  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT  PC_UNDO  PC_CUT    &kp F4  &kp F10  &kp F5  &kp F11  &kp F6  &kp F12  &none  &none
+                  &trans       &mt LALT C_VOL_DN            &mt LGUI C_PP           PC_COPY            &mt RCTRL F1     &mt RGUI F2      &mt RALT F3      &trans
 
-                                                                               &none               &none
-                                                                         &none       &none   &none       &none
-                                                                               &none               &none
-                                                                               &none               &none
-                                                                         &none       &none   &none       &none
-                                                                               &none               &none
+                                                                                    &trans             &trans
+                                                                                  &trans  &trans     &trans  &trans
+                                                                                    &trans             &trans
+                                                                                    &trans             &trans
+                                                                                  &trans  &trans     &trans  &trans
+                                                                                    &trans             &trans
             >;
         };
         layer_3 {
@@ -72,26 +78,12 @@
                 &none       &none  &none       &none  &none       &none  &none       &none   &none       &none  &none       &none  &none       &none  &none       &none
                       &none              &none              &none              &none               &none              &none              &none              &none
 
-                                                                               &none               &none
-                                                                         &none       &none   &none       &none
-                                                                               &none               &none
-                                                                               &none               &none
-                                                                         &none       &none   &none       &none
-                                                                               &none               &none
-            >;
-        };
-        layer_4 {
-            bindings = <
-                      &none              &none              &none              &none               &none              &none              &none              &none
-                &none       &none  &none       &none  &none       &none  &none       &none   &none       &none  &none       &none  &none       &none  &none       &none
-                      &none              &none              &none              &none               &none              &none              &none              &none
-
-                                                                               &none               &none
-                                                                         &none       &none   &none       &none
-                                                                               &none               &none
-                                                                               &none               &none
-                                                                         &none       &none   &none       &none
-                                                                               &none               &none
+                                                                               &trans               &trans
+                                                                         &trans       &trans   &trans       &trans
+                                                                               &trans               &trans
+                                                                               &trans               &trans
+                                                                         &trans       &trans   &trans       &trans
+                                                                               &trans               &trans
             >;
         };
     };
