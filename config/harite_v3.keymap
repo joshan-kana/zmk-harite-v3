@@ -178,12 +178,12 @@
  };
 
 /* Cirque */
-/* &spi0 { */
-/*     status = "okay"; */
-/*     glidepoint: glidepoint@0 { */
-/*         status = "okay"; */
-/*     }; */
-/* }; */
+&spi0 {
+    status = "okay";
+    glidepoint: glidepoint@0 {
+        status = "okay";
+    };
+};
 
 /* PMW3310 */
 /* &spi1 { */
