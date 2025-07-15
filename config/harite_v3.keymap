@@ -28,16 +28,34 @@
 };
 
 / {
+  combos {
+    compatible = "zmk,combos";
+    boot_left {
+      timeout-ms = <100>;
+      key-positions = <0 1>;
+      bindings = <&bootloader>;
+      layers = <0>;
+    };
+    boot_right {
+      timeout-ms = <100>;
+      key-positions = <6 7>;
+      bindings = <&bootloader>;
+      layers = <0>;
+    };
+  };
+};
+
+/ {
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-                  &kp Q               &kp F         &kp W         &kp O                          &kp L          &kp U         &kp B         &bootloader
+                  &kp Q               &kp F         &kp W         &kp O                          &kp L          &kp U         &kp B         &kp Q
                 &kp BSLH  &kp QUOT  &kp X  &kp K  &kp Y  &kp H  &kp M  &kp C                   &kp I  &kp G   &kp R  &kp V  &kp P  &kp J  &kp SEMI  &kp FSLH
                   &mt LSHIFT COMMA    &mt LALT S    &mt LGUI T    &mt LCTRL A                    &mt RCTRL N    &mt RGUI E    &mt RALT D    &mt RSHIFT DOT
 
-                                                                  &lt _FUN TAB                   &none
+                                                                  &lt _FUN TAB                   &bootloader
                                                                 &lt _NUM BSPC  &lt _SYS DEL    &key_repeat  &kp SPC
                                                                   &mt LSHIFT ESC                 &mt RSHIFT ENTER
                                                                   &mkp MB4                       &kp UP
@@ -106,10 +124,10 @@
     };
 
     /* Cirque */
-    glidepoint_listener: glidepoint_listener {
-        compatible = "zmk,input-listener";
-        device = <&glidepoint>;
-    };
+    /* glidepoint_listener: glidepoint_listener { */
+    /*     compatible = "zmk,input-listener"; */
+    /*     device = <&glidepoint>; */
+    /* }; */
     /* PMW3310 */
     /* trackball_listener { */
     /*   compatible = "zmk,input-listener"; */
