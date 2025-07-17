@@ -15,7 +15,7 @@
 #define PC_COPY &mt LCTRL LC(C)
 #define PC_PST  &kp LC(V)
 
-#define CAG (LCTRL|LALT|LGUI)
+#define CAG LC(LA(LGUI))
 
 &mt {
   flavor = "balanced";
@@ -36,6 +36,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
             bindings = <&kp>, <&kp>;
             display-name = "Mod-Tap";
         };
@@ -62,7 +63,7 @@
 
         default_layer {
             bindings = <
-                  &kp Q               &kp F         &mt CAG W         &kp O                          &kp L          &kp U         &kp B         &kp Z
+                  &kp Q               &kp F         &mt CAG W     &kp O                          &kp L          &mt CAG U     &kp B         &kp Z
                 &kp BSLH  &kp QUOT  &kp X  &kp K  &kp Y  &kp H  &kp M  &kp C                   &kp I  &kp G   &kp R  &kp V  &kp P  &kp J  &kp SEMI  &kp FSLH
                   &mt LSHIFT COMMA    &mt LALT S    &mt LGUI T    &mt LCTRL A                    &mt RCTRL N    &mt RGUI E    &mt RALT D    &mt RSHIFT DOT
 
@@ -76,7 +77,7 @@
         };
         num {
             bindings = <
-                  &kp DLLR               &kp TILDE         &kp LBKT            &kp EQUAL              &kp N7          &kp N8            &kp N9            &kp EXCL
+                  &kp DLLR               &kp TILDE         &mt CAG LBKT        &kp EQUAL              &kp N7          &mt CAG N8        &kp N9            &kp EXCL
                 &kp  CARET  &kp PRCNT  &kp HASH  &kp AT  &kp LBRC  &kp RBRC  &kp UNDER  &kp PLUS    &kp N4  &kp N0  &kp N5  &kp LPAR  &kp N6  &kp RPAR  &kp AMPS  &kp STAR
                   &trans                 &mt LALT GRAVE    &mt LGUI RBKT       &mt LCTRL MINUS        &mt RCTRL N1    &mt RGUI N2       &mt RALT N3       &trans
 
@@ -90,7 +91,7 @@
         };
         fun {
             bindings = <
-                  &none         &kp C_VOL_UP                &kp PSCRN               PC_PST             &kp F7           &kp F8           &kp F9           &none
+                  &none         &kp C_VOL_UP                &mt CAG PSCRN           PC_PST             &kp F7           &mt CAG  F8      &kp F9           &none
                 &none  &none  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT  PC_UNDO  PC_CUT    &kp F4  &kp F10  &kp F5  &kp F11  &kp F6  &kp F12  &none  &none
                   &trans       &mt LALT C_VOL_DN            &mt LGUI C_PP           PC_COPY            &mt RCTRL F1     &mt RGUI F2      &mt RALT F3      &trans
 
