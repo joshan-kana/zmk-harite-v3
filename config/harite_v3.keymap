@@ -26,7 +26,7 @@
 &lt {
   flavor = "hold-preferred";
   tapping-term-ms = <300>;
-  quick-tap-ms = <300>;
+  quick-tap-ms = <0>;
 };
 
 / {
@@ -44,16 +44,10 @@
 
     combos {
       compatible = "zmk,combos";
-      boot_left {
+      caps {
         timeout-ms = <100>;
-        key-positions = <0 1>;
-        bindings = <&bootloader>;
-        layers = <0>;
-      };
-      boot_right {
-        timeout-ms = <100>;
-        key-positions = <6 7>;
-        bindings = <&bootloader>;
+        key-positions = <38 39>; // Both shifts
+        bindings = <&kp CAPS>;
         layers = <0>;
       };
     };
