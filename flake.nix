@@ -46,7 +46,7 @@
           board = "seeeduino_xiao_ble";
           shield = "harite_v3_left";
 
-          zephyrDepsHash = "sha256-lvjiBqvIhI+YF6pLtewrH5fMhLXp0R9k/noHHK3TUe4=";
+          zephyrDepsHash = "sha256-0nuQKDrv5vWEmS9M7vbHQK8NN/IzAL8k16P5+7pSFkw=";
 
           meta = {
             description = "ZMK firmware";
