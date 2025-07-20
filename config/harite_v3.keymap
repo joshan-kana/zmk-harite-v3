@@ -66,7 +66,7 @@
                 &kp BSLH  &kp QUOT  &kp X  &kp K  &kp Y  &kp H  &kp M  &kp C                   &kp I  &kp G   &kp R  &kp V  &kp P  &kp J  &kp SEMI  &kp FSLH
                   &mt LSHIFT COMMA    &mt LALT S    &mt LGUI T    &mt LCTRL A                    &mt RCTRL N    &mt RGUI E    &mt RALT D    &mt RSHIFT DOT
 
-                                                                  &lt _FUN TAB                   &none
+                                                                  &lt _FUN TAB                   &kp LC(BSPC)
                                                                 &lt _NUM BSPC  &lt _SYS DEL    &key_repeat  &kp SPC
                                                                   &hmt LSHIFT ESC                &hmt RSHIFT ENTER
                                                                   &mkp MB4                       &kp UP
