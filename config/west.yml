@@ -11,16 +11,16 @@ manifest:
   projects:
     - name: zmk-keyboard-harite-v3
       remote: dlip
-      revision: 34c4901a51198d73ea5a5d17fee94054418ddba6  # main
+      revision: cbdfc8dce9ba32184b43d170605692c7592c985a  # main
     - name: zmk-analog-input-driver
       remote: badjeff
       revision: d07aedb66801598c0c278e60565bd8f6ab42f9b2  # main
     - name: cirque-input-module
       remote: dlip
-      revision: 0de55f36bc720b5be3d8880dc856d4d78baf5214  # main
+      revision: 3a32403349d52f633811db1887a46aa3a88a789d  # main
     - name: zmk-pmw3610-driver
       remote: badjeff
-      revision: 72280acc8e4467ed1b4947ee216c6bf31d0278b2  # main
+      revision: 14d39b7a6944d1014544a2382707b14724c22f49  # main
     - name: zmk
       remote: dlip
       revision: eeac4c3a53e6945281d5e2bb189c94b2c0bbce45  # main
