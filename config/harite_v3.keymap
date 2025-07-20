@@ -42,8 +42,13 @@
         };
     };
 
+    macros {
+      #include "macros.dtsi"
+    };
+
     combos {
       compatible = "zmk,combos";
+      #include "combos.dtsi"
       caps {
         timeout-ms = <100>;
         key-positions = <38 39>; // Both shifts
