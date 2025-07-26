@@ -134,6 +134,12 @@
         */
     };
 
+    /* Wired */
+    /* wired_split { */
+    /*     compatible = "zmk,wired-split"; */
+    /*     device = <&xiao_serial>; */
+    /* }; */
+
     /* Cirque */
     /* glidepoint_listener: glidepoint_listener { */
     /*     compatible = "zmk,input-listener"; */
