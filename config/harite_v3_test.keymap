@@ -78,11 +78,6 @@
         };
     };
 
-    /* Cirque */
-    glidepoint_listener: glidepoint_listener {
-        compatible = "zmk,input-listener";
-        device = <&glidepoint>;
-    };
     /* PMW3310 */
     /* trackball_listener { */
     /*   compatible = "zmk,input-listener"; */
