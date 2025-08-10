@@ -3,12 +3,28 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    combos {
+      compatible = "zmk,combos";
+      unlock_left {
+        timeout-ms = <100>;
+        key-positions = <0 1 2 3>;
+        bindings = <&studio_unlock>;
+        layers = <0>;
+      };
+      unlock_right {
+        timeout-ms = <100>;
+        key-positions = <4 5 6 7>;
+        bindings = <&studio_unlock>;
+        layers = <0>;
+      };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-                      &studio_unlock     &kp U              &kp U              &kp U               &kp U              &kp U              &kp U              &kp U
+                      &kp U              &kp U              &kp U              &kp U               &kp U              &kp U              &kp U              &kp U
                 &kp L       &kp R  &kp L       &kp R  &kp L       &kp R  &kp L       &kp R   &kp L       &kp R  &kp L       &kp R  &kp L       &kp R  &kp L       &kp R
                       &kp D              &kp D              &kp D              &kp D               &kp D              &kp D              &kp D              &kp D
 
