@@ -1,11 +1,10 @@
-# ZMK Module Template
+# Harite v3 ZMK Firmware
 
-This repository contains a template for a ZMK module, as it would most frequently be used. 
+## Using Pre-compiled Firmware
 
-## Usage
-
-Read through the [ZMK Module Creation](https://zmk.dev/docs/development/module-creation) page for details on how to configure this template.
-
-## More Info
-
-For more info on modules, you can read through  through the [Zephyr modules page](https://docs.zephyrproject.org/3.5.0/develop/modules.html) and [ZMK's page on using modules](https://zmk.dev/docs/features/modules). [Zephyr's west manifest page](https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#west-manifests) may also be of use.
+- Download the left/right uf2 files in the [Releases](https://github.com/dlip/zmk-harite-v3/releases)
+- Plug the MCU into your USB port
+- Press reset button on the MCU twice quickly
+- Copy the respective sides' uf2 file onto the USB drive that appears
+- Open [ZMK studio](https://zmk.studio)
+- Press all 4 joysticks up on either hand to unlock it for keymap editing
