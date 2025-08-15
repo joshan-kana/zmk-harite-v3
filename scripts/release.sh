@@ -15,3 +15,4 @@ done
 
 scripts/reset.sh
 cp build/zephyr/zmk.uf2 release/reset.uf2
+rm -rf build
