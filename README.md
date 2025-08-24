@@ -14,12 +14,26 @@
 - [Fork the repo](https://github.com/dlip/zmk-harite-v3/fork) then clone it
 - Install [Python](https://www.python.org/downloads/)
 - Install [West](https://docs.zephyrproject.org/latest/develop/west/install.html)
+- Open terminal to cloned repo directory
 - Init west
 
 ```
 
 west init -l config
 west update
+```
+
+- Set environment (Mac/Linux)
+
+```
+
+source zephyr/zephyr-env.sh
+```
+
+- Set environment (Windows)
+
+```
+zephyr/zephyr-env.cmd
 ```
 
 - Build Left
@@ -35,10 +49,9 @@ west build -p auto -s zmk/app -S zmk-usb-logging -b seeeduino_xiao_ble -S studio
 
 ```
 west build -p auto -s zmk/app -S zmk-usb-logging -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD=harite_v3_right -DZMK_CONFIG=$PWD/config -DCONFIG_ZMK_STUDIO=y
+```
 
 - Put right side into bootloader mode and copy build/zephyr/zmk.uf2 to the usb drive
-
-```
 
 ## Building on Nix
 
