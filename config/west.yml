@@ -9,9 +9,6 @@ manifest:
     - name: petejohanson
       url-base: https://github.com/petejohanson
   projects:
-    - name: zmk-keyboard-harite-v3
-      remote: dlip
-      revision: e1c89e971b5ecf2c19cae725ba83e8f2a695911a  # main
     - name: zmk-analog-input-driver
       remote: badjeff
       revision: d07aedb66801598c0c278e60565bd8f6ab42f9b2  # main

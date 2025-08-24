@@ -1,0 +1,5 @@
+#include "harite_v3.dtsi"
+
+&glidepoint_split {
+    device = <&glidepoint>;
+};
