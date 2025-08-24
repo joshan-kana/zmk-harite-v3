@@ -21,7 +21,7 @@
       packages = forAllSystems (system: rec {
         default = firmware;
 
-        firmware = zmk-nix.legacyPackages.${system}.buildKeyboard {
+        firmware = zmk-nix.legacyPackages.${system}.buildSplitKeyboard {
           name = "firmware";
           extraWestBuildFlags = [
             "-S"
@@ -45,7 +45,7 @@
           ];
 
           board = "seeeduino_xiao_ble";
-          shield = "harite_v3_left";
+          shield = "harite_v3_%PART%";
 
           zephyrDepsHash = "sha256-QMDVdQwOYvmyNHSJg3ZFiK0s3XZovmWOXm0/QLPTa4k=";
 

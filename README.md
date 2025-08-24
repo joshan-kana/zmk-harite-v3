@@ -52,16 +52,23 @@ west build -p auto -s zmk/app -S zmk-usb-logging -b seeeduino_xiao_ble -S studio
 
 ## Building on Nix
 
-- Immutably
+### Immutably
+
+- Build
 
 ```
 nix -vL --show-trace build
 ```
 
-- Dev shell
+- Flash the files in `result`
+
+### Dev shell
+
+- Build
 
 ```
 nix develop -c zsh
-scripts/build.sh left
-scripts/build.sh right
+scripts/build.sh (left/right)
 ```
+
+- Put side into bootloader mode and copy build/zephyr/zmk.uf2 to the usb drive
