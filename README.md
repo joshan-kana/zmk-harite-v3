@@ -38,7 +38,6 @@ zephyr/zephyr-env.cmd
 
 ```
 west build -p auto -s zmk/app -S zmk-usb-logging -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD=harite_v3_left -DZMK_CONFIG=$PWD/config -DCONFIG_ZMK_STUDIO=y
-
 ```
 
 - Put left side into bootloader mode and copy build/zephyr/zmk.uf2 to the usb drive
