@@ -23,7 +23,6 @@
 
         firmware = zmk-nix.legacyPackages.${system}.buildKeyboard {
           name = "firmware";
-          config = "config/stained";
           extraWestBuildFlags = [
             "-S"
             "zmk-usb-logging"

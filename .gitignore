@@ -9,4 +9,5 @@
 /modules
 /.west
 /release
-/config/harite_v3.keymap
+/bootloader
+/tools
