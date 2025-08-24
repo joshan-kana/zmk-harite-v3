@@ -18,7 +18,6 @@
 - Init west
 
 ```
-
 west init -l config
 west update
 ```
@@ -26,7 +25,6 @@ west update
 - Set environment (Mac/Linux)
 
 ```
-
 source zephyr/zephyr-env.sh
 ```
 
