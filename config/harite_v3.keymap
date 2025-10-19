@@ -35,8 +35,8 @@
                                                                          &kp BSPC    &kp DEL &key_repeat &kp SPACE
                                                                                &kp ESC             &kp ENTER
                                                                                &kp U               &kp U
-                                                                         &mkp MB1    &mkp MB2&kp L       &kp R
-                                                                               &mkp MB3            &kp D
+                                                                         &mkp MB1    &mkp MB3&kp L       &kp R
+                                                                               &mkp MB2            &kp D
             >;
         };
         layer_1 {
