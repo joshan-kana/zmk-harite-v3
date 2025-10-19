@@ -27,7 +27,7 @@
       };
       sys_layer_right {
         timeout-ms = <300>;
-        key-positions = <34 43>;
+        key-positions = <37 44>;
         bindings = <&tog 3>;
       };
     };
