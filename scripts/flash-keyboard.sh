@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # filepath: /Users/joshan/repos/zmk-harite-v3/flash-keyboard.sh
 
 set -e
