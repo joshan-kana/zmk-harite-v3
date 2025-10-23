@@ -52,7 +52,7 @@ west build -p auto -s zmk/app -S zmk-usb-logging -b seeeduino_xiao_ble -S studio
 
 ## Building on Nix
 
-### Immutably
+### Immutably (bluetooth and full/partial wired works but zmk studio does not work)
 
 - Build
 
@@ -62,7 +62,7 @@ nix -vL --show-trace build
 
 - Flash the files in `result`
 
-### Dev shell
+### Dev shell (zmk studio and full wired works but bluetooth and partial wired (bluetooth between halves) does not work)
 
 - Build
 
