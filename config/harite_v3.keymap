@@ -30,6 +30,11 @@
         key-positions = <37 44>;
         bindings = <&tog 3>;
       };
+      delete_combo {
+        timeout-ms= <300>;
+        key-positions = <33 34>;
+        bindings = <&kp ESC>;
+      };
     };
 
     keymap {
@@ -38,15 +43,15 @@
         default_layer {
             bindings = <
                       &kp Q              &kp F              &kp W              &kp O               &kp L              &kp U              &kp B              &kp Z
-                &kp E       &kp D    &kp X     &kp K  &kp Y       &kp H  &kp M       &kp C   &kp I       &kp G  &kp R       &kp V  &kp P       &kp V  &kp COMMA    &kp DOT
+                &kp E       &kp D    &kp X     &kp K  &kp Y       &kp H  &kp M       &kp C   &kp I       &kp G  &kp R       &kp V  &kp P       &kp J  &kp COMMA    &kp DOT
                       &kp LCTRL          &kp LALT           &kp LGUI           &kp LSHFT           &kp LSHFT          &kp LGUI           &kp LALT           &kp LCTRL
 
-                                                                               &kp TAB             &kp BSPC
-                                                                         &kp A       &kp DEL &key_repeat &kp SPACE
-                                                                               &kp ESC             &kp ENTER
-                                                                               &kp S               &mo 3
-                                                                         &mkp MB1    &mkp MB3&kp N       &mo 1
+                                                                               &kp ESC             &mo 3
+                                                                         &mkp MB1    &mkp MB3&kp TAB     &mo 1
                                                                                &mkp MB2            &mo 2
+                                                                               &kp S               &kp BSPC
+                                                                         &kp A       &kp T   &key_repeat &kp SPACE
+                                                                               &kp N               &kp ENTER
             >;
         };
         num {
