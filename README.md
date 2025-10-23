@@ -67,7 +67,15 @@ nix -vL --show-trace build
 - Build
 
 ```
+# enter nix dev shell
 nix develop -c zsh
+
+# setup west (only on first local build)
+west init -l config
+west update
+west zephyr-export
+
+# build firmware
 scripts/build.sh (left/right)
 ```
 
