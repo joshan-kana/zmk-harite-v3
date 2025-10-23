@@ -17,7 +17,7 @@ MOUNT_POINT="/Volumes/NO NAME"
 # Styled header
 gum style \
   --foreground 212 --border-foreground 212 --border double \
-  --align center --width 50 --margin "1 2" --padding "1 2" \
+  --align center --width 60 --margin "1 2" --padding "1 2" \
   "ZMK Keyboard Flasher" "Harite V3"
 
 # Check if firmware files exist
@@ -43,12 +43,17 @@ flash_half() {
   
   gum style \
     --foreground 99 --border normal --border-foreground 99 \
-    --align center --width 50 --margin "1 0" --padding "0 1" \
+    --align center --width 60 --margin "1 0" --padding "0 1" \
     "Flashing ${side} half"
   
   gum style --foreground 6 "📋 Instructions:"
   echo "1. Connect the ${side} half via USB"
   echo "2. Put the ${side} half into bootloader mode"
+  
+  # Preview command
+  gum style --foreground 214 "🔍 Command that will be executed:"
+  gum style --foreground 214 --border normal --border-foreground 214 \
+    --margin "0 0" --padding "0 2" "cp \"$firmware\" \"$MOUNT_POINT\""
   
   gum confirm "Ready to continue?" || { 
     gum style --foreground 3 "⚠️ Flashing cancelled"; 
@@ -65,19 +70,19 @@ flash_half() {
   echo ""
 }
 
-# Flash right half
-flash_half "right" "$RIGHT_FIRMWARE"
+# Ask which half to flash first
+gum style --foreground 6 "Which half would you like to flash first?"
+FIRST_HALF=$(gum choose "right" "left")
 
-# Prompt before continuing to left half
-gum confirm "Ready to flash the left half?" || {
-  gum style --foreground 3 "⚠️ Left half flashing cancelled";
-  exit 1;
-}
+# Flash first half
+flash_half "$FIRST_HALF" "${FIRMWARE_DIR}/zmk_${FIRST_HALF}.uf2"
 
-# Flash left half
-flash_half "left" "$LEFT_FIRMWARE"
+# Flash second half
+SECOND_HALF=$([ "$FIRST_HALF" = "right" ] && echo "left" || echo "right")
+gum style --foreground 6 "Now let's flash the ${SECOND_HALF} half"
+flash_half "$SECOND_HALF" "${FIRMWARE_DIR}/zmk_${SECOND_HALF}.uf2"
 
 gum style \
   --foreground 10 --border normal --border-foreground 10 \
-  --align center --width 50 --margin "1 2" --padding "1 2" \
-  "🎉 Flashing complete!" "Both halves should now be running the updated firmware."
+  --align center --width 60 --margin "1 2" --padding "1 2" \
+  "🎉 Flashing complete!" "Your keyboard is now running the updated firmware."
