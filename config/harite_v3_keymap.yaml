@@ -162,5 +162,5 @@ combos:
   k: {t: sys, h: toggle}
 - p: [39, 41]
   k: {t: sys, h: toggle}
-- p: [33, 34]
-  k: ESC
+- p: [40, 41]
+  k: DEL

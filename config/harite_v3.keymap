@@ -32,8 +32,8 @@
       };
       delete_combo {
         timeout-ms= <300>;
-        key-positions = <33 34>;
-        bindings = <&kp ESC>;
+        key-positions = <40 41>;
+        bindings = <&kp DEL>;
       };
     };
 
