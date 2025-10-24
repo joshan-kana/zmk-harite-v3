@@ -11,4 +11,7 @@ if [ -d build ]; then
 fi
 
 SIDE=${1}
+
+# set the number of parallel threads
+export CMAKE_BUILD_PARALLEL_LEVEL=$(nproc)
 west build -p auto -s zmk/app -S zmk-usb-logging -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD=harite_v3_${SIDE} -DZMK_CONFIG=$PWD/config -DCONFIG_ZMK_STUDIO=y
