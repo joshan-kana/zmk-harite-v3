@@ -64,12 +64,29 @@
         system:
         let
           pkgs = nixpkgs.legacyPackages.${system};
+          
+          # Define shell scripts from aliases
+          shellAliases = [
+            (pkgs.writeShellScriptBin "bld" ''
+              ./scripts/build.sh "$@"
+            '')
+            (pkgs.writeShellScriptBin "clean" ''
+              rm -rf build_left build_right
+              echo "Build directories cleaned 🧹"
+            '')
+            (pkgs.writeShellScriptBin "km" ''
+              ./scripts/visual-keymap.sh "$@"
+            '')
+          ];
         in
         {
-          default = pkgs.callPackage "${zmk-nix}/nix/shell.nix" {
-            extraPackages = [ pkgs.python3Packages.setuptools pkgs.gum pkgs.keymap-drawer];
-          };
-
+          default = (pkgs.callPackage "${zmk-nix}/nix/shell.nix" {
+            extraPackages = [ pkgs.python3Packages.setuptools pkgs.gum pkgs.keymap-drawer] ++ shellAliases;
+          }).overrideAttrs (oldAttrs: {
+            shellHook = (oldAttrs.shellHook or "") + ''
+              # echo "ZMK development environment loaded with custom aliases!"
+            '';
+          });
         }
       );
     };
