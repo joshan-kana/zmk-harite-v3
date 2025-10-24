@@ -7,7 +7,7 @@ build_side() {
   local side=$1
   local build_dir="build_${side}"
   
-  rm -rf "${build_dir}"
+  # rm -rf "${build_dir}"
   
   west build -d "${build_dir}" -p auto -s zmk/app -S zmk-usb-logging -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD=harite_v3_${side} -DZMK_CONFIG=$PWD/config -DCONFIG_ZMK_STUDIO=y
 }
