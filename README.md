@@ -1,5 +1,7 @@
 # Harite v3 ZMK Firmware
 
+![visual keymap](./harite_v3_keymap.svg)
+
 ## Using Pre-compiled Firmware
 
 - Download the left/right uf2 files in the [Releases](https://github.com/dlip/zmk-harite-v3/releases)
