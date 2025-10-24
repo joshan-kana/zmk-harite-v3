@@ -110,6 +110,13 @@
                                                                                &none               &none
             >;
         };
+        /* Here are extra layers that can be enabled by pressing + in zmk studio */
+        extra1 {
+            status = "reserved";
+        };
+        extra2 {
+            status = "reserved";
+        };
     };
 
     /* PMW3310 */
