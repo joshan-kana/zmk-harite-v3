@@ -8,3 +8,6 @@ clean() {
     rm -rf build_left build_right
     echo "Build directories cleaned."
 }
+
+# create visual keymap
+alias km='./scripts/visual-keymap.sh'
