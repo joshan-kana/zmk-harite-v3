@@ -1,5 +1,7 @@
 # Harite v3 ZMK Firmware
 
+- main/central half: left
+
 ![visual keymap](./harite_v3_keymap.svg)
 
 ## Using Pre-compiled Firmware

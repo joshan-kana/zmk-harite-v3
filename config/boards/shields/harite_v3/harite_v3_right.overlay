@@ -1,21 +1,10 @@
 #include "harite_v3.dtsi"
-#include <dt-bindings/zmk/input_transform.h>
 
 &default_transform {
-    col-offset = <6>;
+    col-offset = <6>; // Add offset to right side when right side is peripheral
 };
 
-&glidepoint_listener {
+&glidepoint_split {
+    device = <&glidepoint>;
     status = "okay";
-    input-processors =
-        <&zip_xy_scaler 2 1>;
 };
-
-&glidepoint_split_listener {
-    status = "okay";
-    input-processors =
-        <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>
-        , <&zip_xy_scaler 1 10>
-        , <&zip_xy_to_scroll_mapper>;
-};
-
