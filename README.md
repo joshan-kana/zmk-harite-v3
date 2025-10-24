@@ -62,7 +62,7 @@ nix -vL --show-trace build
 
 - Flash the files in `result`
 
-### Dev shell (zmk studio and full wired works but bluetooth and partial wired (bluetooth between halves) does not work)
+### Dev shell (all features work!)
 
 - Build
 
