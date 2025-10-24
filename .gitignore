@@ -1,4 +1,6 @@
 /build
+/build_left
+/build_right
 /result
 /zmk-analog-input-driver
 /zmk-pmw3610-driver
