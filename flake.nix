@@ -67,7 +67,7 @@
         in
         {
           default = pkgs.callPackage "${zmk-nix}/nix/shell.nix" {
-            extraPackages = [ pkgs.python3Packages.setuptools pkgs.gum ];
+            extraPackages = [ pkgs.python3Packages.setuptools pkgs.gum pkgs.keymap-drawer];
           };
 
         }
