@@ -64,7 +64,7 @@ nix -vL --show-trace build
 
 - Flash the files in `result`
 
-### Dev shell (all features work!)
+### Dev shell (all features work! however, only runs on linux as a test for python fails on darwin)
 
 - Build
 
