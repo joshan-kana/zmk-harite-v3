@@ -70,7 +70,7 @@
             pkgs.python3.override {
               packageOverrides = self: super: {
                 canopen = super.canopen.overrideAttrs (oldAttrs: {
-                  patches = (oldAttrs.patches or []) ++ [ ./skip-flaky-tests.patch ];
+                  patches = (oldAttrs.patches or []) ++ [ ./patches/skip-flaky-tests.patch ];
                 });
               };
             }
