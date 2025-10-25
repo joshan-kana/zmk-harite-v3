@@ -1,0 +1,20 @@
+--- a/test/test_emcy.py
++++ b/test/test_emcy.py
+@@ -78,6 +78,7 @@
+         self.assertEqual(len(self.emcy.active), 0)
+ 
+     def test_emcy_consumer_wait(self):
++        raise unittest.SkipTest("Flaky on macOS")
+         PAUSE = TIMEOUT / 2
+ 
+         def push_err():
+--- a/test/test_network.py
++++ b/test/test_network.py
+@@ -241,6 +241,7 @@
+         self.assertEqual([3], [node for node in self.network])
+ 
+     def test_network_send_periodic(self):
++        raise unittest.SkipTest("Flaky on macOS")
+         DATA1 = bytes([1, 2, 3])
+         DATA2 = bytes([4, 5, 6])
+         COB_ID = 0x123

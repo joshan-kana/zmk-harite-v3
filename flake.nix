@@ -65,6 +65,18 @@
         let
           pkgs = nixpkgs.legacyPackages.${system};
           
+          # Override Python package set with patched canopen (only on Darwin)
+          customPython3 = if pkgs.stdenv.isDarwin then
+            pkgs.python3.override {
+              packageOverrides = self: super: {
+                canopen = super.canopen.overrideAttrs (oldAttrs: {
+                  patches = (oldAttrs.patches or []) ++ [ ./skip-flaky-tests.patch ];
+                });
+              };
+            }
+          else
+            pkgs.python3;
+          
           # Define shell scripts from aliases
           shellAliases = [
             (pkgs.writeShellScriptBin "bld" ''
@@ -81,6 +93,7 @@
         in
         {
           default = (pkgs.callPackage "${zmk-nix}/nix/shell.nix" {
+            python3 = customPython3;
             extraPackages = [ pkgs.python3Packages.setuptools pkgs.gum pkgs.keymap-drawer] ++ shellAliases;
           }).overrideAttrs (oldAttrs: {
             shellHook = (oldAttrs.shellHook or "") + ''
