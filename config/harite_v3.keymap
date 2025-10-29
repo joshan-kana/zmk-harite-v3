@@ -55,9 +55,9 @@
                                                                                &kp UP              &none
                                                                          &kp LEFT    &kp RIGHT &none      &none
                                                                                &kp DOWN            &none
-                                                                               &none               &none
-                                                                         &none       &none   &none       &none
-                                                                               &none               &none
+                                                                               &kp HOME            &none
+                                                                         &kp PAGE_UP &kp PAGE_DOWN &none &none
+                                                                               &kp END             &none
             >;
         };
         sys {
