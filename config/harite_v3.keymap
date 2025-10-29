@@ -6,15 +6,6 @@
 #include <dt-bindings/zmk/mouse.h>
 
 / {
-    combos {
-      compatible = "zmk,combos";
-      delete_combo {
-        timeout-ms= <300>;
-        key-positions = <40 41>;
-        bindings = <&kp DEL>;
-      };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -50,7 +41,7 @@
             bindings = <
                       &none              &none              &none              &none               &kp UP              &none              &none              &none
                 &none       &none  &none       &none  &none       &none  &none       &none   &kp LEFT    &kp RIGHT  &none       &none  &none       &none  &none       &none
-                      &none              &none              &none              &none               &kp DOWN              &none              &none              &none
+                      &none              &none              &none              &kp DELETE          &kp DOWN              &none              &none              &none
 
                                                                                &kp UP              &none
                                                                          &kp LEFT    &kp RIGHT &none      &none
