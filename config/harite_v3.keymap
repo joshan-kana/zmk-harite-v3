@@ -46,7 +46,7 @@
                 &kp E       &kp D    &kp X     &kp K  &kp Y       &kp H  &kp M       &kp C   &kp I       &kp G  &kp R       &kp V  &kp P       &kp J  &kp COMMA    &kp DOT
                       &kp LCTRL          &kp LALT           &kp LGUI           &kp LSHFT           &kp LSHFT          &kp LGUI           &kp LALT           &kp LCTRL
 
-                                                                               &kp ESC             &mo 3
+                                                                               &kp ESC             &tog 3
                                                                          &mkp MB1    &mkp MB3&kp TAB     &mo 1
                                                                                &mkp MB2            &mo 2
                                                                                &kp S               &kp BSPC

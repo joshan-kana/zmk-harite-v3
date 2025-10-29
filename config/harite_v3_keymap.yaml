@@ -1,7 +1,54 @@
 layout: {zmk_keyboard: harite_v3}
 layers:
-  default: [Q, F, W, O, L, U, B, Z, E, D, X, K, Y, H, M, C, I, G, R, V, P, J, ',', ., LCTRL, LALT, LGUI, LSHFT, LSHFT, LGUI, LALT, LCTRL, ESC, sys, '&mkp MB1', '&mkp
-      MB3', TAB, num, '&mkp MB2', sym, S, BSPC, A, T, '&key_repeat', SPACE, N, ENTER]
+  default:
+  - Q
+  - F
+  - W
+  - O
+  - L
+  - U
+  - B
+  - Z
+  - E
+  - D
+  - X
+  - K
+  - Y
+  - H
+  - M
+  - C
+  - I
+  - G
+  - R
+  - V
+  - P
+  - J
+  - ','
+  - .
+  - LCTRL
+  - LALT
+  - LGUI
+  - LSHFT
+  - LSHFT
+  - LGUI
+  - LALT
+  - LCTRL
+  - ESC
+  - {t: sys, h: toggle}
+  - '&mkp MB1'
+  - '&mkp MB3'
+  - TAB
+  - num
+  - '&mkp MB2'
+  - sym
+  - S
+  - BSPC
+  - A
+  - T
+  - '&key_repeat'
+  - SPACE
+  - N
+  - ENTER
   num:
   - '1'
   - '2'
@@ -100,55 +147,8 @@ layers:
   - ''
   - ''
   - ''
-  sys:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '&bootloader'
-  - {t: '&bootloader', type: held}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  sys: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '&bootloader', '&bootloader',
+    '', '', '', '', '', '', '', '', '', '', '', '', '', '']
   '4': ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
     '', '', '', '', '', '', '', '', '']
 combos:
