@@ -40,7 +40,7 @@ layers:
   - TAB
   - num+sym
   - '&mkp MB2'
-  - sym
+  - nav
   - S
   - BSPC
   - A
@@ -98,7 +98,7 @@ layers:
   - ''
   - '%'
   - ''
-  sym:
+  nav:
   - ''
   - ''
   - ''

@@ -46,7 +46,7 @@
                                                                                &kp PERCENT         &none
             >;
         };
-        sym {
+        nav {
             bindings = <
                       &none              &none              &none              &none               &none              &none              &none              &none
                 &none       &none  &none       &none  &none       &none  &none       &none   &none       &none  &none       &none  &none       &none  &none       &none
