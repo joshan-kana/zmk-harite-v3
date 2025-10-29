@@ -158,9 +158,5 @@ combos:
 - p: [4, 5, 6, 7]
   k: '&studio_unlock'
   l: [default]
-- p: [38, 40]
-  k: {t: sys, h: toggle}
-- p: [39, 41]
-  k: {t: sys, h: toggle}
 - p: [40, 41]
   k: DEL

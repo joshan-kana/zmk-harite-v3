@@ -20,16 +20,6 @@
         bindings = <&studio_unlock>;
         layers = <0>;
       };
-      sys_layer_left {
-        timeout-ms = <300>;
-        key-positions = <38 40>;
-        bindings = <&tog 3>;
-      };
-      sys_layer_right {
-        timeout-ms = <300>;
-        key-positions = <39 41>;
-        bindings = <&tog 3>;
-      };
       delete_combo {
         timeout-ms= <300>;
         key-positions = <40 41>;
