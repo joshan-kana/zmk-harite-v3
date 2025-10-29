@@ -38,7 +38,7 @@ layers:
   - '&mkp MB1'
   - '&mkp MB3'
   - TAB
-  - num
+  - num+sym
   - '&mkp MB2'
   - sym
   - S
@@ -49,7 +49,7 @@ layers:
   - SPACE
   - N
   - ENTER
-  num:
+  num+sym:
   - '1'
   - '2'
   - '3'

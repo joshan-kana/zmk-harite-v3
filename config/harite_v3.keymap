@@ -32,7 +32,7 @@
                                                                                &kp N               &kp ENTER
             >;
         };
-        num {
+        num+sym {
             bindings = <
                       &kp N1             &kp N2             &kp N3             &kp N4              &kp N5             &kp N6             &kp N7             &kp N8
                 &kp EXCL     &kp PIPE &kp STAR    &kp AMPS&kp SEMI   &kp CARET&kp FSLH  &kp BSLH&kp LPAR    &kp RPAR&kp LBRC &kp RBRC &kp LBRC    &kp LBRC&kp AT       &kp GRAVE
