@@ -9,9 +9,8 @@ if ! command -v gum &> /dev/null; then
     exit 1
 fi
 
-FIRMWARE_DIR="result"
-RIGHT_FIRMWARE="${FIRMWARE_DIR}/zmk_right.uf2"
-LEFT_FIRMWARE="${FIRMWARE_DIR}/zmk_left.uf2"
+RIGHT_FIRMWARE="./build_right/zephyr/zmk.uf2"
+LEFT_FIRMWARE="./build_left/zephyr/zmk.uf2"
 MOUNT_POINT="/Volumes/NO NAME"
 
 # Styled header
@@ -75,12 +74,19 @@ gum style --foreground 6 "Which half would you like to flash first?"
 FIRST_HALF=$(gum choose "right" "left")
 
 # Flash first half
-flash_half "$FIRST_HALF" "${FIRMWARE_DIR}/zmk_${FIRST_HALF}.uf2"
+if [ "$FIRST_HALF" = "right" ]; then
+  flash_half "right" "$RIGHT_FIRMWARE"
+else
+  flash_half "left" "$LEFT_FIRMWARE"
+fi
 
-# Flash second half
 SECOND_HALF=$([ "$FIRST_HALF" = "right" ] && echo "left" || echo "right")
 gum style --foreground 6 "Now let's flash the ${SECOND_HALF} half"
-flash_half "$SECOND_HALF" "${FIRMWARE_DIR}/zmk_${SECOND_HALF}.uf2"
+if [ "$SECOND_HALF" = "right" ]; then
+  flash_half "right" "$RIGHT_FIRMWARE"
+else
+  flash_half "left" "$LEFT_FIRMWARE"
+fi
 
 gum style \
   --foreground 10 --border normal --border-foreground 10 \
