@@ -89,6 +89,9 @@
             (pkgs.writeShellScriptBin "km" ''
               ./scripts/visual-keymap.sh "$@"
             '')
+            (pkgs.writeShellScriptBin "flsh" ''
+              ./scripts/flash-keyboard.sh
+            '')
           ];
         in
         {
