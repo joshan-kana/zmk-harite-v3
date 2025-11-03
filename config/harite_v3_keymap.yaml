@@ -9,8 +9,8 @@ layers:
   - U
   - B
   - Z
-  - E
-  - D
+  - ','
+  - .
   - X
   - K
   - Y
@@ -23,8 +23,8 @@ layers:
   - V
   - P
   - J
-  - ','
-  - .
+  - E
+  - D
   - LCTRL
   - LALT
   - LGUI
