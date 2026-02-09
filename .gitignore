@@ -14,3 +14,4 @@
 /bootloader
 /tools
 /.direnv
+.DS_Store
